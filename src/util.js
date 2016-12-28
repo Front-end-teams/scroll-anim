@@ -19,6 +19,7 @@ export function dataToArray(vars) {
   return [vars];
 }
 
+//转换参数，转化后数组的长度是2，这一点要注意
 export function transformArguments(arg) {
   if (Array.isArray(arg)) {
     if (arg.length === 2) {
@@ -90,10 +91,12 @@ export function objectEqual(obj1, obj2) {
   return equalBool;
 }
 
+//获取浏览器已经滚动的高度
 export function currentScrollTop() {
   return window.pageYOffset || document.body.scrollTop || document.documentElement.scrollTop;
 }
 
+//window.innerHeight
 export function windowHeight() {
   return window.innerHeight ||
     document.documentElement.clientHeight || document.body.clientHeight;
